@@ -1,0 +1,27 @@
+<h2>Room List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Room Number</th>
+      <th>Price</th>
+      <th>Type</th>
+      <th>Available</th>
+      <!-- Add other columns as needed -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let room of rooms">
+      <td>{{ room.id }}</td>
+      <td>{{ room.roomNumber }}</td>
+      <td>{{ room.price }}</td>
+      <td>{{ room.roomType }}</td>
+      <td>{{ room.available }}</td>
+      <!-- Add other columns as needed -->
+      <td>
+        <button class="btn btn-primary" (click)="updateRoom(room.id)">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

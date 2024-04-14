@@ -1,0 +1,22 @@
+<h2>Update Room</h2>
+<form>
+  <div class="form-group">
+    <label for="roomNumber">Room Number</label>
+    <input type="text" class="form-control" id="roomNumber" [(ngModel)]="room.roomNumber" name="roomNumber">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price" [(ngModel)]="room.price" name="price">
+  </div>
+  <div class="form-group">
+    <label for="roomType">Room Type</label>
+    <input type="text" class="form-control" id="price" [(ngModel)]="room.roomType" name="roomType">
+  </div>
+  <div class="form-group">
+    <label for="available">Availability</label>
+    <input type="text" class="form-control" id="available" [(ngModel)]="room.available" name="available">
+  </div>
+  <!-- Add other input fields as needed -->
+  <!-- Pass the room ID to the updateRoom() method -->
+  <button type="submit" class="btn btn-primary" (click)="updateRoom()">Update Room</button>
+</form>

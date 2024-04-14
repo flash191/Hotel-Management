@@ -1,0 +1,26 @@
+<div *ngIf="reservations">
+    <h2>Reservations</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Check-in Date</th>
+          <th>Check-out Date</th>
+          <th>User</th>
+          <th>User Email</th>
+          <th>Room Number</th>
+          <th>Room Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of reservations">
+          <td>{{ reservation.checkInDate | date }}</td>
+          <td>{{ reservation.checkOutDate | date }}</td>
+          <td *ngIf="reservation.users">{{ reservation.users.username }}</td>
+          <td *ngIf="reservation.users">{{ reservation.users.email }}</td>
+          <td *ngIf="reservation.room">{{ reservation.room?.roomNumber }}</td>
+          <td *ngIf="reservation.room">{{ reservation.room?.roomType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
